@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="3px">
+            <tr>
+                <th>pk</th>
+                <th>school_name</th>
+                <th>name</th>
+                <th>id</th>
+                <th>class</th>
+                <th>email</th>
+                <th>DateOfJoin</th>
+            </tr>
+            {% for so in EQLS %}
+                <tr>
+                    <td>{{so.pk}}</td>
+                    <td>{{so.school_name}}</td>
+                    <td>{{so.Name}}</td>
+                    <td>{{so.id}}</td>
+                    <td>{{so.cls}}</td>
+                    <td>{{so.email}}</td>
+                    <td>{{so.doj}}</td>
+                </tr>
+
+            {% endfor %}
+
+        </table>
+    </center>
+</body>
+</html>

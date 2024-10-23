@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>selectMultiple</h1>
+        <form  method="POST">
+            {% csrf_token %}
+
+            <label for="sn">schoolName</label>
+            <!-- <input type="text" name="tn" id="tn"><br><br> -->
+            <select name="sn" id="sn" multiple>
+                {% for so in LSO %}
+                    <option value="{{so.school_name}}">{{so.school_name}}</option>
+
+                {% endfor %}
+             </select><br><br>
+
+            <input type="submit" value="InsertSchool">
+
+        </form>
+        </form>
+    </center>
+    
+</body>
+</html>
